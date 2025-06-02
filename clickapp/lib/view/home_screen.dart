@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onPressed: () {
                    final String counterName = _counterNameController.text.trim();
                     if (counterName.isNotEmpty) {
-                  Provider.of<CounterViewModel>(context, listen: false).addCounter(counterName);
+                  Provider.of<CounterViewModel>(context, listen: false).addCounter(counterName); //listen false = non ci registriamo per modifiche all'oggetto dicendo a Flutter di non ricostruire il widget corrente se l'oggetto CounterViewModel cambia
                   Navigator.of(context).pop(); // Chiudi il dialogo
                   _counterNameController.clear();
                 }
